@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    
+</head>
+<body>
+    <div class="mk">
+        <input type="text" id="fn" placeholder="Enter first Number"> 
+        <input type="text" id="sn" placeholder="Enter second Number"> 
+        <br><br>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">x</button>
+        <button onclick="div()">/</button>
+        <h2 id="count">0</h2>
+    </div>
+    <style>
+        *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    html{
+        background-image: url("im.jpg");
+        background-size: cover;
+    }
+    .mk{
+        text-align: center;
+        text-shadow: 0 10px 10px 0px #000000 ;
+        font-size: 1.5rem;
+        line-height: 3.6rem;
+    }
+    h2{
+        margin-top: 2rem;
+        font-size: 4rem;
+    }
+    button{
+        width: 5rem;
+        padding: 0.8rem;
+        background-color: #3f9cda;
+        font-weight:bold;
+        font-size: 1.9rem;
+        text-align: center ;
+        border-radius: 0.6rem;
+    }
+    button:hover, button:focus{
+        background-color: azure;
+        font-size: 1.6rem;
+    }
+    input{
+        padding: auto;
+        background-color: #3f9cda;
+        height: 1.8rem;
+        font-size: inherit;
+    }
+    input:hover,input:focus{
+        background-color: rgb(93, 176, 253);
+    }
+    </style>
+    <script>
+        let a=document.getElementById("fn");
+    let b=document.getElementById("sn");
+    let c=document.getElementById("count");
+    function add(){
+        let d=parseInt(a.value);
+        let e=parseInt(b.value);
+        let k=d+e;
+        c.innerText=k;
+    }
+    function sub(){
+        let d=parseInt(a.value);
+        let e=parseInt(b.value);
+        let k=d-e;
+        c.innerText=k;
+    }
+    function mul(){
+        let d=parseInt(a.value);
+        let e=parseInt(b.value);
+        let k=d*e;
+        c.innerText=k;
+    }
+    function div(){
+        let d=parseInt(a.value);
+        let e=parseInt(b.value);
+        if(e==0) c.innerText="Enter a Non ZERO number";
+        else{
+            let k=d/e;
+            c.innerText=k;
+        }
+        
+        
+    }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+html{
+    background-image: url("k.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#clk{
+    margin-top: 6%;
+    font-size: 400%;
+    text-align: center;
+    
+}
